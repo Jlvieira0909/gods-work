@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
@@ -13,6 +13,26 @@ const navLinks = [
   { title: "Dízimo", href: "/dizimo" },
   { title: "Contato", href: "/contato" },
 ];
+
+const sidebarVariants: Variants = {
+  closed: {
+    x: "100%",
+    transition: { type: "spring", stiffness: 400, damping: 40 },
+  },
+  open: {
+    x: 0,
+    transition: { type: "spring", stiffness: 400, damping: 40 },
+  },
+};
+
+const linkVariants: Variants = {
+  closed: { x: 20, opacity: 0 },
+  open: (i: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: i * 0.1 },
+  }),
+};
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,26 +56,6 @@ export default function Header() {
       document.body.style.overflow = "unset";
     }
   }, [isOpen]);
-
-  const sidebarVariants = {
-    closed: {
-      x: "100%",
-      transition: { type: "spring", stiffness: 400, damping: 40 },
-    },
-    open: {
-      x: 0,
-      transition: { type: "spring", stiffness: 400, damping: 40 },
-    },
-  };
-
-  const linkVariants = {
-    closed: { x: 20, opacity: 0 },
-    open: (i: number) => ({
-      x: 0,
-      opacity: 1,
-      transition: { delay: i * 0.1 },
-    }),
-  };
 
   return (
     <>
