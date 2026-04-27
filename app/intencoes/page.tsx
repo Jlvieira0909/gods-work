@@ -26,7 +26,7 @@ export default function IntencoesPage() {
           <img
             src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=2000&auto=format&fit=crop"
             alt="Velas acesas numa igreja"
-            className="w-full h-full object-cover filter grayscale"
+            className="w-full h-full object-cover filter md:grayscale"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent"></div>
         </div>

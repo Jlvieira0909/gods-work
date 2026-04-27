@@ -82,7 +82,7 @@ export default function HorariosPage() {
           <img
             src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
             alt="Pintura Clássica"
-            className="w-full h-full object-cover filter grayscale"
+            className="w-full h-full object-cover filter md:grayscale"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
@@ -184,7 +184,7 @@ export default function HorariosPage() {
             <img
               src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
               alt="Textura"
-              className="w-full h-full object-cover filter grayscale mix-blend-screen"
+              className="w-full h-full object-cover filter md:grayscale mix-blend-screen"
             />
           </div>
           <div className="absolute top-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"></div>

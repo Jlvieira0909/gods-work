@@ -45,7 +45,7 @@ export default function DizimoPage() {
           <img
             src="https://paroquiaboavista.com.br/wp-content/uploads/2022/12/2a500e28362b7d84bee8638386a78554.jpg"
             alt="Pintura Clássica"
-            className="w-full h-full object-cover filter grayscale"
+            className="w-full h-full object-cover filter md:grayscale"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">

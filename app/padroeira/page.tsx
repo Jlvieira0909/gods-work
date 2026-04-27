@@ -12,7 +12,7 @@ export default function PadroeiraPage() {
           <img
             src="https://paroquiaboavista.com.br/wp-content/uploads/2022/12/2a500e28362b7d84bee8638386a78554.jpg"
             alt="Imaculada Conceição"
-            className="w-full h-full object-cover filter brightness-75 contrast-125 object-top md:object-center"
+            className="w-full h-full object-cover brightness-90 object-top md:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/80 via-transparent to-transparent"></div>
@@ -102,7 +102,7 @@ export default function PadroeiraPage() {
                 <img
                   src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg"
                   alt="Interior da Matriz"
-                  className="w-full rounded-3xl shadow-2xl filter sepia-[.1] contrast-110"
+                  className="w-full rounded-3xl shadow-2xl"
                 />
                 <figcaption className="text-center text-zinc-400 text-sm mt-4 italic">
                   A presença viva da comunidade.

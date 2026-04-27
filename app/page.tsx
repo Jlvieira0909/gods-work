@@ -1,16 +1,32 @@
-import {
-  ArrowUpRight,
-  Clock,
-  MapPin,
-  Heart,
-  BookOpen,
-  Play,
-} from "lucide-react";
+import { ArrowUpRight, MapPin, Heart, BookOpen, Play } from "lucide-react";
+import Link from "next/link";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SantoDoDia from "./components/SantoDoDia/SantoDoDia";
+import NextEvent from "./components/NextEvent/NextEvent";
 
 export default function Home() {
+  const comunidades = [
+    {
+      name: "Matriz Imaculada",
+      address: "Rua Albano Schmidt, 1885",
+      img: "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg",
+      href: "/comunidades/matriz",
+    },
+    {
+      name: "Santa Luzia",
+      address: "Rua Alcântara, 830",
+      img: "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/file.jpg",
+      href: "/comunidades/santa-luzia",
+    },
+    {
+      name: "Jesus Misericordioso",
+      address: "Rua das Violetas, 330",
+      img: "https://paroquiaboavista.com.br/wp-content/uploads/2023/02/74530024fa785ed0ebfe7109f4bbfdbd.jpg",
+      href: "/comunidades/jesus-misericordioso",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-zinc-50 flex flex-col font-sans selection:bg-amber-900 selection:text-amber-50">
       <Header />
@@ -39,30 +55,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-6 rounded-2xl w-full md:w-80 shrink-0">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-              <span className="text-zinc-200 text-sm font-medium tracking-wide">
-                Próxima Missa
-              </span>
-            </div>
-            <div className="text-3xl font-serif text-white mb-1">
-              Hoje, 19h30
-            </div>
-            <div className="text-zinc-400 text-sm mb-6">
-              Matriz Imaculada Conceição
-            </div>
-            <button className="w-full bg-white text-zinc-950 hover:bg-amber-50 transition-colors py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 group">
-              Ver todos os horários
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </button>
-          </div>
+          <NextEvent />
         </div>
       </section>
 
       <section className="px-4 py-12 md:py-24 max-w-7xl mx-auto w-full relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <div className="md:col-span-2 bg-zinc-200 rounded-3xl p-8 md:p-12 relative overflow-hidden group cursor-pointer h-[400px] flex flex-col justify-end">
+          <Link
+            href="/padroeira"
+            className="md:col-span-2 bg-zinc-200 rounded-3xl p-8 md:p-12 relative overflow-hidden group cursor-pointer h-[400px] flex flex-col justify-end"
+          >
             <img
               src="https://paroquiaboavista.com.br/wp-content/uploads/2022/12/2a500e28362b7d84bee8638386a78554.jpg"
               alt="Nossa Senhora"
@@ -77,10 +79,13 @@ export default function Home() {
                 Conheça a história da Imaculada
               </h2>
             </div>
-          </div>
+          </Link>
 
           <div className="flex flex-col gap-4 md:gap-6">
-            <div className="bg-white rounded-3xl p-8 border border-zinc-200 hover:border-amber-200 hover:shadow-xl transition-all group cursor-pointer flex-1 flex flex-col justify-between">
+            <Link
+              href="/dizimo"
+              className="bg-white rounded-3xl p-8 border border-zinc-200 hover:border-amber-200 hover:shadow-xl transition-all group cursor-pointer flex-1 flex flex-col justify-between"
+            >
               <Heart
                 className="w-8 h-8 text-amber-600 mb-4"
                 strokeWidth={1.5}
@@ -93,21 +98,24 @@ export default function Home() {
                   Devolva a Deus com alegria aquilo que Ele te deu com amor.
                 </p>
               </div>
-            </div>
-            <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-zinc-700 transition-all group cursor-pointer flex-1 flex flex-col justify-between">
+            </Link>
+            <Link
+              href="/sacramentos"
+              className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-zinc-700 transition-all group cursor-pointer flex-1 flex flex-col justify-between"
+            >
               <BookOpen
                 className="w-8 h-8 text-zinc-300 mb-4"
                 strokeWidth={1.5}
               />
               <div>
                 <h3 className="font-serif text-2xl text-white mb-2">
-                  Liturgia Diária
+                  Sacramentos
                 </h3>
                 <p className="text-zinc-400 text-sm">
-                  Acompanhe as leituras e o Evangelho de hoje.
+                  Conheça os sinais visíveis da graça de Deus em nossa vida.
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -179,29 +187,13 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Matriz Imaculada",
-              address: "Rua Albano Schmidt, 1885",
-              img: "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg",
-            },
-            {
-              name: "Santa Luzia",
-              address: "Rua das Oliveiras, 120",
-              img: "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/file.jpg",
-            },
-            {
-              name: "Jesus Misericordioso",
-              address: "Av. Júpiter, 450",
-              img: "https://paroquiaboavista.com.br/wp-content/uploads/2023/02/74530024fa785ed0ebfe7109f4bbfdbd.jpg",
-            },
-          ].map((church, i) => (
-            <div key={i} className="group cursor-pointer">
+          {comunidades.map((church, i) => (
+            <Link key={i} href={church.href} className="group cursor-pointer">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden mb-6 relative">
                 <img
                   src={church.img}
                   alt={church.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter md:grayscale md:group-hover:grayscale-0"
                 />
               </div>
               <h3 className="font-serif text-2xl text-zinc-900 mb-2">
@@ -211,7 +203,7 @@ export default function Home() {
                 <MapPin className="w-4 h-4" />
                 <span className="text-sm">{church.address}</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

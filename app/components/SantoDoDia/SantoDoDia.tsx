@@ -24,7 +24,7 @@ export default async function SantoDoDia() {
         <img
           src={santo.imagem}
           alt={santo.nome}
-          className="absolute inset-0 w-full h-full object-cover filter sepia-[.3] contrast-125 opacity-60 group-hover:scale-105 transition-transform duration-1000"
+          className="absolute inset-0 w-full h-full object-cover filter md:sepia-[.3] contrast-125 opacity-60 group-hover:scale-105 transition-transform duration-1000"
         />
         <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-zinc-900 via-zinc-900/40 to-transparent"></div>
 
