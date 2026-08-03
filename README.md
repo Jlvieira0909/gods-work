@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# ⛪ Paróquia Imaculada Conceição
 
-First, run the development server:
+**Site institucional para uma paróquia com três comunidades — horários, sacramentos, intenções, dízimo e o santo do dia.**
+
+Design editorial com tipografia serifada, paleta âmbar sobre zinco e o cuidado visual que um site de igreja raramente recebe.
+
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion_12-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+
+[**🔗 Ver o site**](https://gods-work-pi.vercel.app)
+
+</div>
+
+---
+
+## 📖 Sobre o projeto
+
+Sites de paróquia geralmente resolvem a informação e param aí: um WordPress com a tabela de horários e pouco mais. A intenção aqui foi tratar o site com o mesmo cuidado estético que o espaço físico recebe — hero em tela cheia com pintura clássica, tipografia serifada nos títulos, itálico nos nomes, paleta âmbar sobre zinco escuro.
+
+O resultado é um site institucional completo para uma paróquia de **três comunidades**, com tudo que um fiel procura online: onde e quando, como participar, como contribuir.
+
+## 🗂️ Páginas
+
+| Rota | Conteúdo |
+| ---- | -------- |
+| `/` | Hero, santo do dia, próximo evento, cards das comunidades |
+| `/horarios` | Grade completa de missas e atividades |
+| `/sacramentos` | Informações sobre batismo, casamento, catequese e demais sacramentos |
+| `/intencoes` | Pedidos de oração e intenções de missa |
+| `/dizimo` | Como contribuir |
+| `/padroeira` | História e devoção à Imaculada Conceição |
+| `/contato` | Contatos da paróquia |
+| `/comunidades/matriz` | Matriz Imaculada — Rua Albano Schmidt, 1885 |
+| `/comunidades/santa-luzia` | Santa Luzia — Rua Alcântara, 830 |
+| `/comunidades/jesus-misericordioso` | Jesus Misericordioso — Rua das Violetas, 330 |
+
+## ✨ Componentes de destaque
+
+### 🗓️ `NextEvent`
+
+Componente client-side que cruza a agenda semanal com o dia e a hora atuais para mostrar **qual é o próximo evento** — missa, Terço dos Homens, Grupo de Oração, Novena Perpétua. Quem abre o site vê o que vem a seguir, não uma tabela para interpretar.
+
+A agenda é um array de objetos `{ day, time, name, local }` dentro do componente.
+
+### 🕯️ `SantoDoDia`
+
+Server Component assíncrono que apresenta o santo do dia com imagem, data formatada em português (`Intl.DateTimeFormat`) e um texto sobre a devoção.
+
+> ⚠️ Hoje a função `fetchSantoDoDia()` retorna dados fixos. A estrutura já é assíncrona justamente para trocar isso por uma chamada real (API de calendário litúrgico ou CMS) sem mudar o componente.
+
+## 🛠️ Stack
+
+| Tecnologia | Versão | Uso |
+| ---------- | ------ | --- |
+| [Next.js](https://nextjs.org/) | 16 | Framework React (App Router, Server Components) |
+| [React](https://react.dev/) | 19 | Biblioteca de UI |
+| [TypeScript](https://www.typescriptlang.org/) | 5 | Tipagem estática |
+| [Tailwind CSS](https://tailwindcss.com/) | 4 | Estilização utilitária |
+| [Framer Motion](https://www.framer.com/motion/) | 12 | Animações |
+| [Lucide React](https://lucide.dev/) | 1.11 | Ícones |
+| [Geist](https://vercel.com/font) | — | Tipografia (sans + mono) |
+
+## 🚀 Como rodar localmente
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) 18 ou superior
+- npm, yarn, pnpm ou bun
+
+### Instalação e execução
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Jlvieira0909/gods-work.git
+cd gods-work
+npm install
+
+npm run dev      # desenvolvimento
+npm run build    # build de produção
+npm run start    # servir o build
+npm run lint     # ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+gods-work/
+├── app/
+│   ├── page.tsx                  # home
+│   ├── layout.tsx                # metadata + fontes Geist
+│   ├── globals.css
+│   ├── components/
+│   │   ├── Header/
+│   │   ├── Footer/
+│   │   ├── NextEvent/            # próximo evento da agenda
+│   │   └── SantoDoDia/           # santo do dia
+│   ├── horarios/
+│   ├── sacramentos/
+│   ├── intencoes/
+│   ├── dizimo/
+│   ├── padroeira/
+│   ├── contato/
+│   └── comunidades/
+│       ├── matriz/
+│       ├── santa-luzia/
+│       └── jesus-misericordioso/
+└── next.config.ts
+```
 
-## Learn More
+## 🎨 Direção visual
 
-To learn more about Next.js, take a look at the following resources:
+| Elemento | Escolha |
+| -------- | ------- |
+| Paleta | Zinco (`zinc-50` a `zinc-950`) com âmbar (`amber-200`, `amber-500`) como acento |
+| Títulos | Serifada, tamanhos grandes, `leading-[0.9]`, itálico nos nomes próprios |
+| Imagens | `mix-blend-luminosity`, opacidade reduzida e gradientes por cima — integram no fundo escuro em vez de disputar atenção |
+| Seleção de texto | Âmbar escuro sobre âmbar claro (`selection:bg-amber-900`) |
+| Molduras | Cantos com bordas finas em âmbar translúcido, sugerindo enquadramento de retábulo |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📋 Pontos de melhoria
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`lang="en"` no `<html>`** — o site é todo em português; trocar para `lang="pt-BR"` corrige acessibilidade e SEO
+- **Metadata genérica** — `description: "Amen"` merece uma descrição real para busca e compartilhamento
+- **Imagens externas** — todas vêm de `paroquiaboavista.com.br`; hospedar localmente evita quebra e permite usar `next/image` com otimização
+- **`SantoDoDia` com dados fixos** — trocar por fonte real de calendário litúrgico
+- **`<img>` em vez de `next/image`** — perde otimização automática e lazy loading
 
-## Deploy on Vercel
+## 🌐 Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Hospedado na [Vercel](https://vercel.com/): **[gods-work-pi.vercel.app](https://gods-work-pi.vercel.app)**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+<div align="center">
+
+Feito com ❤️ por [João Luiz Vieira](https://github.com/Jlvieira0909)
+
+</div>
