@@ -56,7 +56,7 @@ export default function JesusMisericordiosoPage() {
       <section className="relative h-[70vh] w-full bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2023/02/74530024fa785ed0ebfe7109f4bbfdbd.jpg"
+            src="/images/jesus-misericordioso.png"
             alt="Jesus Misericordioso"
             className="w-full h-full object-cover brightness-90"
           />

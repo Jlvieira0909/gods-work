@@ -80,7 +80,7 @@ export default function HorariosPage() {
       <section className="relative pt-40 pb-20 bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
+            src="/images/imaculada-conceicao.jpg"
             alt="Pintura Clássica"
             className="w-full h-full object-cover filter md:grayscale"
           />
@@ -182,7 +182,7 @@ export default function HorariosPage() {
         <div className="max-w-5xl mx-auto bg-zinc-950 p-12 md:p-16 rounded-[3rem] border border-zinc-900 shadow-2xl relative overflow-hidden flex flex-col items-center">
           <div className="absolute inset-0 opacity-10">
             <img
-              src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
+              src="/images/imaculada-conceicao.jpg"
               alt="Textura"
               className="w-full h-full object-cover filter md:grayscale mix-blend-screen"
             />

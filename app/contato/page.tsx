@@ -73,7 +73,7 @@ export default function ContatoPage() {
       <section className="relative pt-40 pb-20 bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
+            src="/images/imaculada-conceicao.jpg"
             alt="Pintura Clássica"
             className="w-full h-full object-cover filter md:grayscale"
           />

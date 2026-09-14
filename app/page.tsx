@@ -10,19 +10,19 @@ export default function Home() {
     {
       name: "Matriz Imaculada",
       address: "Rua Albano Schmidt, 1885",
-      img: "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg",
+      img: "/images/matriz.png",
       href: "/comunidades/matriz",
     },
     {
       name: "Santa Luzia",
       address: "Rua Alcântara, 830",
-      img: "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/file.jpg",
+      img: "/images/santa-luzia.png",
       href: "/comunidades/santa-luzia",
     },
     {
       name: "Jesus Misericordioso",
       address: "Rua das Violetas, 330",
-      img: "https://paroquiaboavista.com.br/wp-content/uploads/2023/02/74530024fa785ed0ebfe7109f4bbfdbd.jpg",
+      img: "/images/jesus-misericordioso.png",
       href: "/comunidades/jesus-misericordioso",
     },
   ];
@@ -34,7 +34,7 @@ export default function Home() {
       <section className="relative w-full min-h-[90vh] flex flex-col justify-end p-4 md:p-8 overflow-hidden">
         <div className="absolute inset-0 bg-zinc-950">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
+            src="/images/imaculada-conceicao.jpg"
             alt="Pintura Clássica Anjos"
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity scale-105"
           />
@@ -66,7 +66,7 @@ export default function Home() {
             className="md:col-span-2 bg-zinc-200 rounded-3xl p-8 md:p-12 relative overflow-hidden group cursor-pointer h-[400px] flex flex-col justify-end"
           >
             <img
-              src="https://paroquiaboavista.com.br/wp-content/uploads/2022/12/2a500e28362b7d84bee8638386a78554.jpg"
+              src="/images/imaculada-conceicao.jpg"
               alt="Nossa Senhora"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -18,8 +18,7 @@ const sacramentos = [
   {
     title: "Batismo",
     icon: Droplets,
-    image:
-      "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg",
+    image: "/images/matriz.png",
     description:
       "O fundamento de toda a vida cristã, a porta da vida no Espírito e a porta que dá acesso aos outros sacramentos.",
     info: "Preparação para pais e padrinhos: 2º Sábado do mês.",
@@ -27,8 +26,7 @@ const sacramentos = [
   {
     title: "Eucaristia",
     icon: UtensilsCrossed,
-    image:
-      "https://images.unsplash.com/photo-1548625361-ecde2bbcd529?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/eucaristia.jpg",
     description:
       "A fonte e o ápice de toda a vida cristã. Na Eucaristia, o próprio Cristo está presente, oferecido e recebido.",
     info: "Missa Matriz: Quartas (19h30), Sábados (19h) e Domingos (08h e 19h).",
@@ -45,8 +43,7 @@ const sacramentos = [
   {
     title: "Matrimônio",
     icon: Heart,
-    image:
-      "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg",
+    image: "/images/imaculada-conceicao.jpg",
     description:
       "A aliança matrimonial pela qual o homem e a mulher constituem entre si uma comunhão íntima de toda a vida.",
     info: "Agendamento com antecedência mínima de 6 meses.",
@@ -61,7 +58,7 @@ export default function SacramentosPage() {
       <section className="relative pt-40 pb-20 bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
+            src="/images/imaculada-conceicao.jpg"
             alt="Fundo Sacro"
             className="w-full h-full object-cover filter md:grayscale"
           />

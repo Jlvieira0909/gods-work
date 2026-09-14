@@ -80,7 +80,7 @@ export default function MatrizPage() {
       <section className="relative h-[70vh] w-full bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg"
+            src="/images/matriz.png"
             alt="Igreja Matriz"
             className="w-full h-full object-cover brightness-90"
           />
@@ -369,7 +369,7 @@ export default function MatrizPage() {
       <section className="py-24 bg-zinc-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1548625361-ecde2bbcd529?q=80&w=1000&auto=format&fit=crop"
+            src="/images/eucaristia.jpg"
             alt="Interior Sacro"
             className="w-full h-full object-cover"
           />

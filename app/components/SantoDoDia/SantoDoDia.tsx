@@ -10,8 +10,7 @@ async function fetchSantoDoDia() {
     }).format(new Date()),
     descricao:
       "Invocada como intercessora dos doentes crônicos, ofereceu todos os seus sofrimentos físicos pela conversão dos pecadores e pelas almas do purgatório.",
-    imagem:
-      "https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg",
+    imagem: "/images/imaculada-conceicao.jpg",
   };
 }
 

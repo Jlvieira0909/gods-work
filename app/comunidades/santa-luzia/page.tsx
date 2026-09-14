@@ -57,7 +57,7 @@ export default function SantaLuziaPage() {
       <section className="relative h-[70vh] w-full bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/file.jpg"
+            src="/images/santa-luzia.png"
             alt="Comunidade Santa Luzia"
             className="w-full h-full object-cover brightness-90"
           />
@@ -200,7 +200,7 @@ export default function SantaLuziaPage() {
                   >
                     <figure className="my-8">
                       <img
-                        src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/file.jpg"
+                        src="/images/santa-luzia.png"
                         alt="Pintura Clássica de Santa Luzia"
                         className="w-full rounded-3xl shadow-xl"
                       />

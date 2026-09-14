@@ -43,7 +43,7 @@ export default function DizimoPage() {
       <section className="relative pt-40 pb-20 bg-zinc-950 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/12/2a500e28362b7d84bee8638386a78554.jpg"
+            src="/images/imaculada-conceicao.jpg"
             alt="Pintura Clássica"
             className="w-full h-full object-cover filter md:grayscale"
           />
@@ -101,7 +101,7 @@ export default function DizimoPage() {
       <section className="py-24 px-4 bg-zinc-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/InmaculadaConcepcion_071215.jpg"
+            src="/images/imaculada-conceicao.jpg"
             className="w-full h-full object-cover"
           />
         </div>

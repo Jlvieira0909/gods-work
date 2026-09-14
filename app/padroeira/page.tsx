@@ -10,7 +10,7 @@ export default function PadroeiraPage() {
       <section className="relative h-[80vh] w-full bg-zinc-950 flex flex-col justify-end p-6 md:p-12 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://paroquiaboavista.com.br/wp-content/uploads/2022/12/2a500e28362b7d84bee8638386a78554.jpg"
+            src="/images/imaculada-conceicao.jpg"
             alt="Imaculada Conceição"
             className="w-full h-full object-cover brightness-90 object-top md:object-center"
           />
@@ -100,7 +100,7 @@ export default function PadroeiraPage() {
 
               <figure className="my-12">
                 <img
-                  src="https://paroquiaboavista.com.br/wp-content/uploads/2022/11/920a1defb50d636a857f918eadbeee7d.jpg"
+                  src="/images/matriz.png"
                   alt="Interior da Matriz"
                   className="w-full rounded-3xl shadow-2xl"
                 />
